@@ -4,6 +4,7 @@ const express = require('express')
 const cors = require('cors')
 const tourRoutes = require('./routes/tourRoutes')
 const serviceRoutes = require('./routes/serviceRoutes')
+const productRoutes = require('./routes/productRoutes')
 
 // express app
 const app = express()
@@ -21,5 +22,6 @@ app.get('/', (req, res) => res.send('API Running!'));
 
 app.use(tourRoutes());
 app.use(serviceRoutes());
+app.use(productRoutes());
 
 app.listen(port, () => console.log(`Server started on port ${port}`));
